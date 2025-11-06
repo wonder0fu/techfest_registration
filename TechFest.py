@@ -5,7 +5,7 @@
 print ('\nWelcome To SMIT TechFest!!')
 print ('\nEvent organized by Antonio Dinglasan of APPDAET BTCS1')
 
-num_participants = int(input('How many participants will register? '))
+num_participants = int(input('\nHow many participants will register? '))
 if num_participants <= 0:
     print('Invalid number of Participants')
     exit()
@@ -18,7 +18,7 @@ for i in range(num_participants):
     track = input("Enter chosen track: ")
     participants.append ({"name": name, "track": track})
 
-print("Registered Participants:")
+print("\nRegistered Participants:")
 for i, j in enumerate(participants, 1):
     print(f"{i}. {j['name']} - {j['track']}")
 
@@ -37,13 +37,13 @@ duplicate_found = False
 
 for j in participants:
     if j["name"] in duplicate_name:
-        print(f"Duplicate Name Found: {j['name']}")
+        print(f"\nDuplicate Name Found: {j['name']}")
         duplicate_found = True
         break
     duplicate_name.add(j["name"])
 
 if not duplicate_found:
-    print ("No Duplicate Names Found")
+    print ("\nNo Duplicate Names Found")
 
 #Task 5 Track Summary Report
 track_summary = {}
@@ -54,6 +54,8 @@ for i in participants:
     else:
         track_summary[track] = 1
 
-print ("Participants per track:")
+print ("\nParticipants per track:")
 for track, count in track_summary.items():
     print(f"{track}: {count}")
+
+input("\nPress Enter to Exit......")
