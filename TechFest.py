@@ -1,5 +1,5 @@
 # TechFest Registration System A Python program that records event participants and analyzes track diversity.
-
+#   Antonio Andres R. Dinglasan - Midterm - BTCS1
 
 # Task 1 Registration Setup
 print ('\nWelcome To SMIT TechFest!!')
@@ -45,3 +45,15 @@ for j in participants:
 if not duplicate_found:
     print ("No Duplicate Names Found")
 
+#Task 5: Track Summary Report
+track_summary = {}
+for i in participants:
+    track = i["track"]
+    if track in track_summary:
+        track_summary[track] += 1
+    else:
+        track_summary[track] = 1
+
+print ("Participants per track:")
+for track, count in track_summary.items():
+    print(f"{track}: {count}")
