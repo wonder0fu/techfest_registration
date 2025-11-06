@@ -58,4 +58,4 @@ print ("\nParticipants per track:")
 for track, count in track_summary.items():
     print(f"{track}: {count}")
 
-input("\nPress Enter to Exit......")
+input("\nPress Enter to Exit.....")
