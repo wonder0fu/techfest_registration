@@ -22,7 +22,7 @@ print("Registered Participants:")
 for i, j in enumerate(participants, 1):
     print(f"{i}. {j['name']} - {j['track']}")
 
-# Task 3: Track Diversity Report
+# Task 3 Track Diversity Report
 unique_tracks = {p["track"] for p in participants}
 
 if len(unique_tracks) < 2:
@@ -45,7 +45,7 @@ for j in participants:
 if not duplicate_found:
     print ("No Duplicate Names Found")
 
-#Task 5: Track Summary Report
+#Task 5 Track Summary Report
 track_summary = {}
 for i in participants:
     track = i["track"]
