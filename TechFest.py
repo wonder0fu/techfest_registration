@@ -11,3 +11,13 @@ if num_participants <= 0:
     exit()
 
 # Task 2 Collect Participant Information
+participants = []
+for i in range(num_participants):
+    print(f"Enter Participant {i+1}: ")
+    name = input("Enter Participant name: ")
+    track = input("Enter chosen track: ")
+    participants.append ({"name": name, "track": track})
+
+print("Registered Participants:")
+for i, p in enumerate(participants, 1):
+    print(f"{i}. {p['name']} - {p['track']}")
